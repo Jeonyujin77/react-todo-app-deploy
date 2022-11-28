@@ -7,19 +7,19 @@
   margin-top: 6rem;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid gray;
+  border: 1px solid #dee2e6;
 
   .app-title {
-    background: #22b8cf;
+    background: tomato;
     color: white;
     height: 4rem;
     font-size: 1.5rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .content {
     background: white;
-    padding: 15px;
   }
 }

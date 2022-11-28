@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { MdAdd } from 'react-icons/md';
+import './TodoInsert.scss';
 
 const TodoInsert = ({ todos, setTodos }) => {
   const [title, setTitle] = useState(''); // 제목
@@ -36,22 +38,24 @@ const TodoInsert = ({ todos, setTodos }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <label htmlFor="todo-title">제목</label>
+    <form onSubmit={onSubmit} className="TodoInsert">
       <input
         type="text"
+        placeholder="제목을 입력하세요."
         value={title}
         onChange={onTitleChange}
         id="todo-title"
       />
-      <label htmlFor="todo-content">내용</label>
       <input
         type="text"
+        placeholder="내용을 입력하세요."
         value={content}
         onChange={onContentChange}
         id="todo-content"
       />
-      <button>등록</button>
+      <button type="submit">
+        <MdAdd />
+      </button>
     </form>
   );
 };
