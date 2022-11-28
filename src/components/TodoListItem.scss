@@ -1,0 +1,43 @@
+.TodoListItem {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+  clear: both;
+
+  .button-box {
+    float: right;
+    button {
+      // 기본 스타일 초기화
+      background: none;
+      outline: none;
+      border: none;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: 0.1s background ease-in;
+    }
+    .remove {
+      border: 1px solid tomato;
+      color: tomato;
+      margin-right: 10px;
+      &:hover {
+        background: tomato;
+        color: #fff;
+      }
+    }
+    .toggle {
+      border: 1px solid olivedrab;
+      color: olivedrab;
+      &:hover {
+        background: olivedrab;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.last-item {
+  order: 1;
+  text-decoration: line-through;
+  background: #f8f9fa;
+}
