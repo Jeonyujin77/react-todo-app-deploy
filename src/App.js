@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
+import TodoTemplate from './components/TodoTemplate';
 
-function App() {
+const App = () => {
+  // 할일 목록 상태
+  const [todos, setTodos] = useState([
+    { id: 1, title: '공부하기', content: 'todolist 만들기', done: false },
+    { id: 2, title: '공부하기', content: 'js 고급 강좌듣기', done: false },
+    { id: 3, title: '운동하기', content: '홈트레이닝', done: false },
+  ]);
+
+  // 할 일 삭제 기능
+  // 삭제하기
+  const onRemove = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  // 할 일 상태 수정 기능
+  const onToggle = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, done: !todo.done } : todo,
+      ),
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TodoTemplate>
+      <TodoInsert todos={todos} setTodos={setTodos} />
+      <TodoList
+        todos={todos}
+        onRemove={onRemove}
+        onToggle={onToggle}
+      ></TodoList>
+    </TodoTemplate>
   );
-}
+};
 
 export default App;
