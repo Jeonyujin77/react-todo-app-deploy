@@ -1,15 +1,18 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
 import TodoTemplate from './components/TodoTemplate';
+import initDatas from './api/data.json';
 
 const App = () => {
   // 할일 목록 상태
-  const [todos, setTodos] = useState([
-    { id: 1, title: '공부하기', content: 'todolist 만들기', done: false },
-    { id: 2, title: '공부하기', content: 'js 고급 강좌듣기', done: false },
-    { id: 3, title: '운동하기', content: '홈트레이닝', done: false },
-  ]);
+  const [todos, setTodos] = useState([]);
+
+  // 초기로딩 시 데이터 가져온다.
+  useEffect(() => {
+    console.log('CALL THE API');
+    setTodos([...initDatas.data]);
+  }, []);
 
   // 할 일 삭제 기능
   // 삭제하기
