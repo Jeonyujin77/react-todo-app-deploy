@@ -3,7 +3,7 @@ import './TodoList.scss';
 import { memo } from 'react';
 
 const TodoList = ({ todos, onRemove, onToggle }) => {
-  const MemorizedTodoListItem = memo(TodoListItem); // 할일 컴포넌트 memo
+  const MemorizedTodoListItem = memo(TodoListItem); // *할일 컴포넌트 memo
 
   return (
     <div className="todo-list">
