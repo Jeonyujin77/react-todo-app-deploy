@@ -1,31 +1,20 @@
 {
   "data": [
     {
-<<<<<<< HEAD
-      "id": 1669796458101,
-=======
       "id": 1,
->>>>>>> 7da66d2fbb504bc4e195237505abed40ac5b3550
       "title": "공부하기",
       "content": "todolist 만들기",
       "done": false
     },
     {
-<<<<<<< HEAD
       "id": 1669796458102,
-=======
-      "id": 2,
->>>>>>> 7da66d2fbb504bc4e195237505abed40ac5b3550
       "title": "공부하기",
       "content": "js 고급 강좌듣기",
       "done": false
     },
     {
-<<<<<<< HEAD
       "id": 1669796458103,
-=======
-      "id": 3,
->>>>>>> 7da66d2fbb504bc4e195237505abed40ac5b3550
+
       "title": "운동하기",
       "content": "홈트레이닝",
       "done": false
