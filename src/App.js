@@ -7,7 +7,7 @@ import initDatas from './api/data.json';
 const App = () => {
   // 할일 목록 상태
   const [todos, setTodos] = useState([]);
-  const MemorizedTodoList = memo(TodoList); // 투두리스트 상태를 기억한다.
+  const MemorizedTodoList = memo(TodoList); // 할일목록 컴포넌트 memo
 
   // 초기로딩 시 데이터 가져온다.
   useEffect(() => {

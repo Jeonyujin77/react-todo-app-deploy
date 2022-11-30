@@ -25,7 +25,7 @@ const TodoInsert = ({ setTodos }) => {
       if (title !== '' && content !== '') {
         setTodos((prev) =>
           prev.concat({
-            id: Date.now(),
+            id: Date.now(), // 현재 시간
             title,
             content,
             done: false,
